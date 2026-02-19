@@ -2,48 +2,165 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <title>Exclusão de conta - AuEncontro</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Exclusão de conta e dados - AuEncontro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: 'Poppins', sans-serif;
+        background: #F18D14;
+        color: #2B304F;
+        padding-bottom: 2rem;
+      }
+      .header {
+        padding: 1.5rem 1.25rem 3rem;
+        text-align: center;
+      }
+      .header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      .header p {
+        margin: 0.5rem 0 0;
+        font-size: 0.95rem;
+        color: rgba(255,255,255,0.95);
+      }
+      .card {
+        margin: 0 1rem;
+        padding: 1.5rem 1.25rem;
+        background: #FFE6C7;
+        border-radius: 32px 32px 0 0;
+        min-height: 60vh;
+        box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+      }
+      .card h2 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #2B304F;
+        margin: 1.25rem 0 0.5rem;
+        padding-bottom: 0.35rem;
+      }
+      .card h2:first-child {
+        margin-top: 0;
+      }
+      .card hr {
+        border: none;
+        height: 2px;
+        background: #F18706;
+        margin: 0 0 0.75rem;
+        border-radius: 1px;
+      }
+      .card p, .card ul {
+        margin: 0 0 0.75rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #464E78;
+      }
+      .card ul {
+        padding-left: 1.25rem;
+      }
+      .card li {
+        margin-bottom: 0.35rem;
+      }
+      .card a {
+        color: #464E78;
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 1px solid #BB2448;
+      }
+      .card a:hover {
+        color: #BB2448;
+      }
+      .email-box {
+        display: inline-block;
+        margin: 0.5rem 0;
+        padding: 0.6rem 1rem;
+        background: #fff;
+        border: 2px solid #464E78;
+        border-radius: 12px;
+        font-weight: 600;
+        color: #464E78;
+      }
+      .highlight {
+        color: #BB2448;
+        font-weight: 600;
+      }
+      @media (min-width: 600px) {
+        body { padding: 0; }
+        .card {
+          max-width: 520px;
+          margin: 0 auto;
+          border-radius: 32px;
+          padding: 2rem;
+        }
+        .header { padding-bottom: 2rem; }
+        .header h1 { font-size: 1.75rem; }
+      }
+    </style>
   </head>
   <body>
-    <main>
-      <h1>Exclusão de conta e dados - AuEncontro</h1>
+    <header class="header" role="banner">
+      <h1>AuEncontro</h1>
+      <p>Exclusão de conta e dados</p>
+    </header>
 
-      <p>
-        Esta página explica como solicitar a exclusão da sua conta
-        e dos seus dados no aplicativo <strong>AuEncontro</strong>.
-      </p>
-
+    <main class="card" role="main">
       <h2>Como solicitar a exclusão</h2>
-      <p>Para excluir sua conta, envie um e-mail para:</p>
+      <hr />
       <p>
-        <a href="mailto:SEU-EMAIL+privacidade@dominio.com">
-          SEU-EMAIL+privacidade@dominio.com
-        </a>
+        Para excluir sua conta e os dados associados no aplicativo
+        <strong>AuEncontro</strong>, você pode:
       </p>
-      <p>No e-mail, informe:</p>
+      <ol style="padding-left: 1.25rem; margin: 0.5rem 0 1rem;">
+        <li><strong>Pelo app:</strong> Perfil → Excluir conta permanentemente (se disponível).</li>
+        <li><strong>Por e-mail:</strong> envie um e-mail para o endereço abaixo usando o mesmo e-mail cadastrado na sua conta.</li>
+      </ol>
+      <p><strong>E-mail para solicitação de exclusão:</strong></p>
+      <p class="email-box">
+        <a href="mailto:contato.auencontro@gmail.com?subject=Exclus%C3%A3o%20de%20conta%20-%20AuEncontro">contato.auencontro@gmail.com</a>
+      </p>
+      <p>No assunto, use: <strong>Exclusão de conta - AuEncontro</strong>.</p>
+      <p>No corpo do e-mail, informe:</p>
       <ul>
         <li>Nome completo</li>
         <li>E-mail utilizado no cadastro</li>
       </ul>
 
       <h2>O que será excluído</h2>
+      <hr />
       <ul>
-        <li>Conta de login (Firebase Auth)</li>
-        <li>Dados de perfil armazenados no banco de dados</li>
-        <li>Outros dados diretamente associados à sua conta</li>
+        <li>Conta de login (credenciais de acesso)</li>
+        <li>Dados de perfil (nome, foto, localização, etc.)</li>
+        <li>Anúncios e publicações vinculados à sua conta</li>
+        <li>Outros dados diretamente associados ao seu usuário</li>
       </ul>
 
       <h2>O que pode ser mantido</h2>
+      <hr />
       <p>
-        Alguns dados podem ser mantidos de forma agregada ou anonimizados,
-        por motivos legais ou estatísticos (por exemplo, contagens de uso).
+        Podemos manter dados de forma agregada ou anonimizada para fins legais
+        ou estatísticos (por exemplo, contagens de uso), sem identificação pessoal.
       </p>
 
       <h2>Prazo</h2>
+      <hr />
       <p>
-        As solicitações de exclusão são processadas em até
-        <strong>30 dias</strong> após o recebimento do pedido.
+        As solicitações são processadas em até
+        <span class="highlight">30 dias</span>
+        após o recebimento. Você receberá confirmação no e-mail informado.
       </p>
     </main>
   </body>
